@@ -11,7 +11,8 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+
   </head>
   <body>
     <!-- navbar -->
@@ -79,7 +80,7 @@
             <p class="mb-5 max-w-md">
                 Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined
             </p>
-            <button class="btn btn-primary bg-[#1dd100] border-none text-black"><a href="#"></a>Buy Tickets</button>
+            <button class="btn btn-primary bg-[#1dd100] border-none text-black"><a href="#bus-info">Buy Tickets</a></button>
             
           </div>
         </div>
@@ -102,11 +103,10 @@
                 <p class="text-gray-600"> Coupon Code</p>
             </div>
 
-            <div class="h-10 w-10 rounded-full overflow-hidden bg-white absolute top-[-20px] left-[324px]">
-                <!-- Content here -->
-            </div>
+            <div class="h-10 w-10 rounded-full overflow-hidden bg-white absolute top-[-20px] left-[324px]"></div>
+                
             <div class="h-10 w-10 rounded-full overflow-hidden bg-white absolute bottom-[-20px] left-[324px]">
-                <!-- Content here -->
+                
             </div>
 
         </div>
@@ -139,7 +139,7 @@
 
     <!-- Bus info -->
 
-    <div class="min-w-screen bg-[#F7F8F8] border-[#1dd100] border-2 rounded-3xl">
+    <div id="bus-info" class="min-w-screen bg-[#F7F8F8] border-[#1dd100] border-2 rounded-3xl">
        
         <!-- Bus info -->
         <div>
@@ -196,8 +196,6 @@
                     </div>
                     
                 </div>
-                
-
 
                 <div class="border-l flex flex-col justify-center gap-2 items-center w-[250px] border-l-[#1dd100] border-dashed">
                     <!-- 550taka -->
@@ -206,6 +204,180 @@
                     <p class="font-light"> Per Seat</p>
                 </div>
             </div>
+            
+            <!-- Seat -->
+            <section class="flex bg-white w-[1170px]  mx-auto p-10 rounded-2xl">
+              
+              
+              
+              <div class="container w-3/5  ">
+                
+                <h1 class="text-3xl font-bold mb-4">Select Your Seat</h1>
+                
+                <hr style="border-top: dashed 1px;"/> 
+                <div class="flex justify-between">
+                  <div class="flex justify-center items-center gap-2 mb-4">
+                    <img src="images/seat-gray.png" alt="">
+                    <p>Available</p>
+                  </div>
+                  
+                  <div class="flex justify-center items-center gap-2 mb-4">
+                    <img src="images/seat-green-filled.png" alt="">
+                    <p class="text-[#1dd100] mr-8">Available</p>
+                  </div>
+
+                </div>
+
+                <hr style="border-top: dashed 1px;"/> 
+
+                <div class="flex justify-end mr-4 mb-3 ">
+                  <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">
+                    <img class="h-6" src="images/steering-wheel.png" alt="">
+                  </div>
+                </div>
+                <div class="flex gap-6 justify-around border">
+                  
+                  
+                  
+                  <div class="grid grid-cols-2 gap-2 justify-between bus-seat" >
+                    <!-- Column 1 -->
+                    
+                    
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">B1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">B2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">C1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">C2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">D1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">D2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">E1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">E2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">F1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">F2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">G1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">G2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">H1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">H2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">I1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">I2</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">J1</div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">J2</div>
+                    </div>
+                  </div>
+                     <!-- Column 2 -->
+                     
+                  <div class="grid grid-cols-2 gap-4 bus-seat ml-6">
+                      
+                      
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">B3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">B4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">C3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">C4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">D3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">D4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">E3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">E4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">F3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">F4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">G3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">G4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">H3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">H4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">I3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">I4</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">J3</div>
+                      </div>
+                      <div class="flex justify-center">
+                          <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">J4</div>
+                      </div>
+
+                  </div>
+                    
+                
+            </div>
+          
+              <div></div>
+            </section>
+
 
         </div>
     </div>
