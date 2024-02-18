@@ -206,10 +206,10 @@
             </div>
             
             <!-- Seat -->
-            <section class="flex bg-white w-[1170px]  mx-auto p-10 rounded-2xl">
+            <section class="flex bg-white w-[1170px] gap-8 mx-auto p-10 rounded-2xl">
               
               
-              
+              <!-- seat layout -->
               <div class="container w-3/5  ">
                 
                 <h1 class="text-3xl font-bold mb-4">Select Your Seat</h1>
@@ -235,6 +235,7 @@
                     <img class="h-6" src="images/steering-wheel.png" alt="">
                   </div>
                 </div>
+
                 <div class="flex gap-6 justify-around border">
                   
                   
@@ -247,7 +248,7 @@
                         <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A1</div>
                     </div>
                     <div class="flex justify-center">
-                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">A2</div>
+                        <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center ">A2</div>
                     </div>
                     <div class="flex justify-center">
                         <div class="bg-[#9e9e9e2f] w-[120px] h-[56px] rounded-2xl m-1 flex items-center justify-center">B1</div>
@@ -375,7 +376,84 @@
                 
             </div>
           
-              <div></div>
+              </div>
+             
+              <!-- ticketing details -->
+              <div class="">
+                <h1 class="font-bold text-xl">Select Your Seat</h1>
+                <hr class="my-5" style="border-top: dashed 1px;" /> 
+                <div class="overflow-x-auto ">
+                  <table class="table bg-[#9e9e9e2f]">
+                    <!-- head -->
+                    <thead>
+                      <tr>
+                        
+                        <th>Seat <span class="w-[23px] h-[13px] bg-[#1dd100] text-white px-2 rounded-sm" >2</span></th>
+                        <th>Class</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- row -->
+                      <tr >
+                        <td>C2</td>
+                        <td>Ecomony</td>
+                        <td>550</td>
+                      </tr>
+                      <tr >
+                        <td>C2</td>
+                        <td>Ecomony</td>
+                        <td>550</td>
+                      </tr>
+                      <tr >
+                        <td>C2</td>
+                        <td>Ecomony</td>
+                        <td>550</td>
+                      </tr>
+                      
+                      <hr>
+
+                      <tr>
+                        <td colspan="2" class="font-bold">Total Price</td>
+                        <td class="font-bold ">BDT <span>1100</span></td>
+                      </tr>
+
+                    <tr>
+                      <td colspan="3" style="position: relative;">
+                        <div style="display: flex;">
+                            <input class="w-[369px] h-14 px-8 rounded-lg" type="text" placeholder="Have any Coupon?" style="flex: 1;">
+                            <button class="btn h-14 w-[100px] bg-[#1dd100] text-white" style="margin-left: -50px;">Apply</button>
+                        </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2" class="font-bold">Grand Total</td>
+                    <td class="font-bold">BDT <span>1100</span></td>
+                  </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <form class="mt-6" id="myForm">
+                  <div class="my-4">
+                      <label class="text-lg" for="passengerName">Passenger Name*</label>
+                      <input class="border w-[433px] h-[64px] px-2 rounded-xl my-2" type="text" id="passengerName" name="passengerName" placeholder="Enter your name" onchange="checkInputs()">
+                  </div>
+                  <div class="my-4">
+                      <label for="phoneNumber">Phone Number*</label>
+                      <input class="border w-[433px] h-[64px] px-2 rounded-xl my-2" type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter Your Phone Number" onchange="checkInputs()">
+                  </div>
+                  <div class="my-4">
+                      <label for="email">Email Id:</label>
+                      <input class="border w-[433px] h-[64px] px-2 rounded-xl my-2" type="email" id="email" name="email" >
+                  </div>
+                  <button class="btn bg-[#1dd100] my-4 w-[433px] text-white" type="submit" id="submitButton" disabled>Submit</button>
+              </form>
+
+              </div>
+
+              
             </section>
 
 
