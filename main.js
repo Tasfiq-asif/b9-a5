@@ -127,6 +127,13 @@ applyButton.addEventListener('click',function(){
     
 });
 
+const closeButton = document.getElementById('closeButton');
+
+// Add a click event listener to the close button
+closeButton.addEventListener('click', function() {
+    // Close the modal dialog
+    my_modal_1.close();
+});
 
 // Form button functionality
 
