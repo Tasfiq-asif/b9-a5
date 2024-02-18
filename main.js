@@ -27,6 +27,7 @@ function addTableRow(buttonText){
     let totalPrice = parseInt(document.getElementById('total-price').innerText) + 550
 
     document.getElementById('total-price').innerText = totalPrice
+    document.getElementById('grand-total').innerText = totalPrice
 
 }
 
@@ -42,25 +43,20 @@ function removeTableRow(tableId){
     let totalPrice = parseInt(document.getElementById('total-price').innerText) - 550
 
     document.getElementById('total-price').innerText = totalPrice
-
+    document.getElementById('grand-total').innerText = totalPrice
 }
+
 
 
 // Button select
 
- 
 // Get all the buttons
- 
- 
+  
  const buttons = document.querySelectorAll('.bus-seat button');
  
  // seat to add
 
  const seatAdd = document.getElementById('seat-add')
-
-
-
- 
 
  // Initialize counter for selected buttons
  let selectedCount = 0;
@@ -92,6 +88,44 @@ function removeTableRow(tableId){
         document.getElementById('seats-left').innerText = seatLeft
      });
  });
+
+ //coupon
+
+ function couponCode(){
+    const discountCode1 = "NEW15"
+    const discountCode2 = "Couple 20"
+
+    const couponInput = document.getElementById('coupon')
+
+    couponInput.addEventListener('onchange',function(e){
+        console.log(e.target.value)
+    })
+}
+
+let applyCoupon = false;
+const discountCode1 = "NEW15";
+const discountCode2 = "Couple 20";
+
+const applyButton = document.getElementById('applyButton');
+
+applyButton.addEventListener('click',function(){
+    const couponInput = document.getElementById('coupon').value
+    let grandTotal = parseInt(document.getElementById('grand-total').innerText)
+
+
+
+    if(couponInput===discountCode1){
+        document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.15;
+        document.getElementById('couponInput').classList.add('hidden')
+        
+
+    }
+    else if(couponInput===discountCode2){
+        document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.20;
+        document.getElementById('couponInput').classList.add('hidden')
+    }
+    
+});
 
 
 // Form button functionality
