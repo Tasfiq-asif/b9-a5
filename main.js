@@ -1,17 +1,44 @@
 
 
+function addTableRow(buttonText){
+
+    const newRow = document.createElement('tr')
+
+    const seatCell = document.createElement('td')
+    seatCell.textContent =buttonText
+
+    const classCell = document.createElement('td')
+    classCell.textContent = 'Ecomomy'
+
+    const priceCell = document.createElement('td')
+    priceCell.textContent = '550'
+
+    newRow.appendChild(seatCell);
+    newRow.appendChild(classCell);
+    newRow.appendChild(priceCell);
+
+    const tbody = document.getElementById("tickets")
+
+    tbody.appendChild(newRow)
+
+
+
+}
 
 
 // Button select
 
- // Get all the buttons
+ 
+// Get all the buttons
+ 
+ 
  const buttons = document.querySelectorAll('.bus-seat button');
  
  // seat to add
 
  const seatAdd = document.getElementById('seat-add')
 
- // seat to decrease
+
 
  
 
@@ -24,14 +51,14 @@
  
  // Add click event listener to each button
  buttons.forEach(button => {
-     button.addEventListener('click', () => {
+     button.addEventListener('click', (e) => {
          // Toggle background color between green and default color
          if (!button.classList.contains('bg-green-500') && selectedCount < 4) {
              button.classList.add('bg-green-500');
              selectedCount++;
              seatLeft--;
              
-             console.log(seatLeft)
+             addTableRow(e.target.innerText)
          } else {
             
             if (button.classList.contains('bg-green-500')) {
