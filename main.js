@@ -2,7 +2,9 @@
 
 function addTableRow(buttonText){
 
+
     const newRow = document.createElement('tr')
+    newRow.id = buttonText
 
     const seatCell = document.createElement('td')
     seatCell.textContent =buttonText
@@ -22,6 +24,24 @@ function addTableRow(buttonText){
     tbody.appendChild(newRow)
 
 
+    let totalPrice = parseInt(document.getElementById('total-price').innerText) + 550
+
+    document.getElementById('total-price').innerText = totalPrice
+
+}
+
+
+function removeTableRow(tableId){
+
+    const tbody = document.getElementById("tickets")
+
+    const row = document.getElementById(tableId)
+
+    tbody.removeChild(row)
+
+    let totalPrice = parseInt(document.getElementById('total-price').innerText) - 550
+
+    document.getElementById('total-price').innerText = totalPrice
 
 }
 
@@ -57,7 +77,6 @@ function addTableRow(buttonText){
              button.classList.add('bg-green-500');
              selectedCount++;
              seatLeft--;
-             
              addTableRow(e.target.innerText)
          } else {
             
@@ -65,6 +84,7 @@ function addTableRow(buttonText){
                 button.classList.remove('bg-green-500'); 
                     selectedCount--;
                     seatLeft++
+                    removeTableRow(e.target.innerText)
                     console.log(selectedCount)
             }
         }
