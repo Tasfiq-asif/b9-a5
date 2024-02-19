@@ -74,15 +74,20 @@ function removeTableRow(tableId){
              selectedCount++;
              seatLeft--;
              addTableRow(e.target.innerText)
-         } else {
+         } 
+         
+         else if (button.classList.contains('bg-green-500')) {
+            button.classList.remove('bg-green-500'); 
+                selectedCount--;
+                seatLeft++
+                removeTableRow(e.target.innerText)
+                
+        }
+         
+         else {
             
-            if (button.classList.contains('bg-green-500')) {
-                button.classList.remove('bg-green-500'); 
-                    selectedCount--;
-                    seatLeft++
-                    removeTableRow(e.target.innerText)
-                    
-            }
+            alert("You can only select 4 ")
+            
         }
 
         if(selectedCount==4){
