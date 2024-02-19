@@ -405,7 +405,7 @@
                     <thead>
                       <tr>
                         
-                        <th>Seat <span id="seat-add" class="w-[23px] h-[13px] bg-[#1dd100] text-white px-2 rounded-sm" >2</span></th>
+                        <th>Seat <span id="seat-add" class="w-[23px] h-[13px] bg-[#1dd100] text-white px-2 rounded-sm" >0</span></th>
                         <th>Class</th>
                         <th>Price</th>
                       </tr>
@@ -427,11 +427,11 @@
                       <tr >
                         <td colspan="3" class="relative">
                             <div id="couponInput" >
-                                <input id="coupon" class="w-[369px] ml-10 h-14 px-8 rounded-lg  relative" type="text" placeholder="Have any Coupon?" style="flex: 1;">
+                                <input id="coupon" class="w-[369px] ml-10 h-14 px-4 rounded-lg  relative" type="text" placeholder="Have any Coupon?" style="flex: 1;">
                                 <button id="applyButton" class="btn h-12 w-[100px] bg-[#1dd100] text-white my-auto relative right-14 ml-[-50px]" disabled type="submit">Apply</button>
                             </div>
                             <div id="couponApplied" class="bg-[#1dd100] text-center rounded-md w-3/4 h-12 text-white hidden flex justify-center items-center ml-10">
-                                <h1 class="font-bold text-sm">Coupon is successfully applied!</h1>
+                                <h1 class="font-bold text-sm"> Discount Price: <span id="discountPrice">0</span></h1>
                             </div>
                         </td>
                     </tr>
@@ -460,7 +460,7 @@
                       <label for="email">Email Id:</label>
                       <input class="border w-[433px] h-[64px] px-2 rounded-xl my-2" type="email" id="email" name="email" placeholder="Enter Your Email Address" >
                   </div>
-                  <button class="btn bg-[#1dd100] my-4 w-[433px] text-white" type="submit" onclick="my_modal_1.showModal()" id="submitButton" disabled >Next</button>
+                  <button class="btn bg-[#1dd100] my-4 w-[433px] text-white" type="submit" onclick="openModal(event)" id="submitButton" disabled >Next</button>
 
                   <dialog id="my_modal_1" class="modal">
                     <div class="modal-box">

@@ -81,30 +81,26 @@ function removeTableRow(tableId){
                     selectedCount--;
                     seatLeft++
                     removeTableRow(e.target.innerText)
-                    console.log(selectedCount)
+                    
             }
         }
 
         if(selectedCount==4){
             document.getElementById('applyButton').disabled = false
         }
+        else{
+            document.getElementById('applyButton').disabled = true
+        }
         seatAdd.innerText =selectedCount
         document.getElementById('seats-left').innerText = seatLeft
+
+        checkInputs()
+
+
      });
  });
 
- //coupon
-
- function couponCode(){
-    const discountCode1 = "NEW15"
-    const discountCode2 = "Couple 20"
-
-    const couponInput = document.getElementById('coupon')
-
-    couponInput.addEventListener('onchange',function(e){
-        console.log(e.target.value)
-    })
-}
+ 
 
 let applyCoupon = false;
 const discountCode1 = "NEW15";
@@ -121,6 +117,7 @@ applyButton.addEventListener('click',function(){
 
     if(couponInput===discountCode1){
         document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.15;
+        document.getElementById('discountPrice').innerText = grandTotal * 0.15
         document.getElementById('couponInput').classList.add('hidden')
         couponApplied.classList.remove('hidden')
         
@@ -128,11 +125,21 @@ applyButton.addEventListener('click',function(){
     }
     else if(couponInput===discountCode2){
         document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.20;
+        document.getElementById('discountPrice').innerText = grandTotal * 0.20
         document.getElementById('couponInput').classList.add('hidden')
         couponApplied.classList.remove('hidden')
     }
+
+    else{
+        alert("Invalid coupon code")
+    }
     
 });
+
+function openModal(event) {
+    event.preventDefault(); 
+    my_modal_1.showModal(); 
+}
 
 const closeButton = document.getElementById('closeButton');
 
@@ -144,14 +151,29 @@ closeButton.addEventListener('click', function() {
 
 // Form button functionality
 
-function checkInputs() {
-    var phoneNumber = document.getElementById('phoneNumber').value;
-    var passengerName = document.getElementById('passengerName').value;
-    var submitButton = document.getElementById('submitButton');
+const phoneNumberInput = document.getElementById('phoneNumber');
+const passengerNameInput = document.getElementById('passengerName');
 
+
+
+function checkInputs() {
+
+    const phoneNumberInput = document.getElementById('phoneNumber');
+    const passengerNameInput = document.getElementById('passengerName');
+    let phoneNumber = phoneNumberInput.value.trim();
+    let passengerName = passengerNameInput.value.trim();
+    let submitButton = document.getElementById('submitButton');
+    let count = parseInt(document.getElementById('seat-add').innerText);
+
+    
     if (phoneNumber && passengerName) {
-        submitButton.disabled = false;
+        
+        if (count > 0) {
+            submitButton.disabled = false; 
+        } else {
+            submitButton.disabled = true; 
+        }
     } else {
-        submitButton.disabled = true;
+        submitButton.disabled = true; 
     }
 }
