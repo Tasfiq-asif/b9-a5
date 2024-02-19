@@ -67,7 +67,7 @@ function removeTableRow(tableId){
  
  // Add click event listener to each button
  buttons.forEach(button => {
-     button.addEventListener('click', (e) => {
+     button.addEventListener('click', function(e){
          // Toggle background color between green and default color
          if (!button.classList.contains('bg-green-500') && selectedCount < 4) {
              button.classList.add('bg-green-500');
@@ -83,6 +83,10 @@ function removeTableRow(tableId){
                     removeTableRow(e.target.innerText)
                     console.log(selectedCount)
             }
+        }
+
+        if(selectedCount==4){
+            document.getElementById('applyButton').disabled = false
         }
         seatAdd.innerText =selectedCount
         document.getElementById('seats-left').innerText = seatLeft
@@ -110,6 +114,7 @@ const applyButton = document.getElementById('applyButton');
 
 applyButton.addEventListener('click',function(){
     const couponInput = document.getElementById('coupon').value
+    const couponApplied = document.getElementById('couponApplied')
     let grandTotal = parseInt(document.getElementById('grand-total').innerText)
 
 
@@ -117,12 +122,14 @@ applyButton.addEventListener('click',function(){
     if(couponInput===discountCode1){
         document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.15;
         document.getElementById('couponInput').classList.add('hidden')
+        couponApplied.classList.remove('hidden')
         
 
     }
     else if(couponInput===discountCode2){
         document.getElementById('grand-total').innerText = grandTotal - grandTotal * 0.20;
         document.getElementById('couponInput').classList.add('hidden')
+        couponApplied.classList.remove('hidden')
     }
     
 });
